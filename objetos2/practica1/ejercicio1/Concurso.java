@@ -40,4 +40,13 @@ public class Concurso {
 		return "Concurso [participantes=" + participantes + "]";
 	}
 
+	public int CantidadParticipantes() {
+
+		return participantes.size();
+	}
+
+	public LocalDate ObtenerFechaInicial() {
+		return this.fechaInicial;
+	}
+
 }
