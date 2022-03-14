@@ -22,7 +22,7 @@ public class Concurso {
 				&& this.fechaFinal.isAfter(LocalDate.now())) {
 			participantes.add(participante);
 			if (this.fechaInicial.isEqual(LocalDate.now())) {
-				participante.ObtenerCartera().Sumarpuntaje();
+				participante.ObtenerCartera().Sumarpuntaje();/* Lo veo mal, preguntar como lo puedo hacer */
 				System.out.println("El participante: " + participante.toString() + "Sumo 10 puntos");
 			}
 		} else {
