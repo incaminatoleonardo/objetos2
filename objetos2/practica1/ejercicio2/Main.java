@@ -5,21 +5,21 @@ public class Main {
 	public static void main(String[] args) {
 
 		// Creacion de bebias
-		Alimento coca = new Bebida("Coca", 7);
-		Alimento jugo = new Bebida("Jugo", 6);
-		Alimento agua = new Bebida("Agua", 4);
+		Bebida coca = new Bebida("Coca", 7);
+		Bebida jugo = new Bebida("Jugo", 6);
+		Bebida agua = new Bebida("Agua", 4);
 		// Creacion de platos
-		Alimento hamburguesa = new PlatoPrincipal("Hamburguesa", 15);
-		Alimento salchicha = new PlatoPrincipal("Salchicha", 12);
-		Alimento papas = new PlatoPrincipal("Papas", 10);
+		PlatoPrincipal hamburguesa = new PlatoPrincipal("Hamburguesa", 15);
+		PlatoPrincipal salchicha = new PlatoPrincipal("Salchicha", 12);
+		PlatoPrincipal papas = new PlatoPrincipal("Papas", 10);
 
 		// Creacion de pedidos
-		Comensal.AñadirPedido(agua, 2);
-		Comensal.AñadirPedido(coca, 3);
-		Comensal.AñadirPedido(papas, 1);
+		Comensal.AñadirPedido(coca, hamburguesa);
+		// Comensal.AñadirPedido(jugo, papas);
+		// Comensal.AñadirPedido(coca, hamburguesa);
 
 		// Crear Tarjeta
-		TarjetaCredito tarjeta = new CreditoVisa();
+		TarjetaCredito tarjeta = new TCreditoVisa();
 
 		// Crear Propina
 		Propina propina = new Propina3porciento();

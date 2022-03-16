@@ -9,24 +9,21 @@ public class Comensal {
 	private TarjetaCredito tarjetacredito;
 	private Propina propina;
 
-	public static void AñadirPedido(Alimento alimento, int cantidad) {
+	public static void AñadirPedido(Bebida bebida, PlatoPrincipal comida) {
 
-		Pedido pedido = new Pedido(alimento, cantidad);
+		Pedido pedido = new Pedido(bebida, comida);
 		pedidos.add(pedido);
 
 	}
 
 	public static void ConfirmarPedido(TarjetaCredito tarjeta, Propina propina) {
-		System.out.println("El costo total de bebidas es: " + Comensal.CostoBebidas());
-	}
-
-	public static int CostoBebidas() {
-		int CostoBebidas = 0;
+		double costoTotal = 0;
 		for (Pedido pedido : pedidos) {
-			CostoBebidas = CostoBebidas + pedido.ObetenerCostoTotal();
+			costoTotal = costoTotal + tarjeta.CalcularPrecioTotal(pedido, propina);
+
 		}
 
-		return CostoBebidas;
+		System.out.println("El costo total del pedido es: " + costoTotal);
 	}
 
 }

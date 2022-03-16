@@ -2,15 +2,16 @@ package ejercicio2;
 
 public class Bebida extends Alimento {
 
-	public Bebida(String nombre, int costo) {
-		super(nombre, costo);
+	private String nombre;
+	public double costo;
 
+	public Bebida(String nombre, int costo) {
+		super();
+		this.nombre = nombre;
+		this.costo = costo;
 	}
 
-	@Override
-	public int ObetenerCosto() {
-
+	public double ObetenerCostoBebida() {
 		return this.costo;
 	}
-
 }

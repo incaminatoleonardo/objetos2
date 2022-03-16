@@ -2,17 +2,34 @@ package ejercicio2;
 
 public class Pedido {
 
-	private Alimento alimento;
-	private int cantidad;
+	// private Alimento alimento;
+	// private int cantidad;
 
-	public Pedido(Alimento alimento, int cantidad) {
+	private Bebida bebida;
+	private PlatoPrincipal comida;
+
+	public Pedido(Bebida bebida, PlatoPrincipal comida) {
 		super();
-		this.alimento = alimento;
-		this.cantidad = cantidad;
+		this.bebida = bebida;
+		this.comida = comida;
 	}
 
-	public int ObetenerCostoTotal() {
-		return alimento.ObetenerCosto() * this.cantidad;
+	public double CalcularPedido() {
+
+		return comida.ObetenerCostoPlato() + bebida.ObetenerCostoBebida();
+
+	}
+
+	public double ObtenerBebida() {
+
+		return bebida.ObetenerCostoBebida();
+
+	}
+
+	public double ObtenerComida() {
+
+		return comida.ObetenerCostoPlato();
+
 	}
 
 }

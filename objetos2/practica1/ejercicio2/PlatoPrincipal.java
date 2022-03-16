@@ -2,13 +2,16 @@ package ejercicio2;
 
 public class PlatoPrincipal extends Alimento {
 
-	public PlatoPrincipal(String nombre, int costo) {
-		super(nombre, costo);
+	private String nombre;
+	public double costo;
 
+	public PlatoPrincipal(String nombre, int costo) {
+		super();
+		this.nombre = nombre;
+		this.costo = costo;
 	}
 
-	@Override
-	public int ObetenerCosto() {
+	public double ObetenerCostoPlato() {
 
 		return this.costo;
 	}
