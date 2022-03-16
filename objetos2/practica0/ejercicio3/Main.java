@@ -9,8 +9,10 @@ public class Main {
 	public static void main(String[] args) {
 
 		System.out.println("No anemico. Estara bien?");
-		Tiempo.ImprimirfechaFormatoLargo();
-		Tiempo.ImprimirfechaFormatoCorto();
+		Tiempo fechaActual = new Tiempo(LocalDate.now());
+		System.out.println("Formato corto: " + fechaActual.ImprimirfechaFormatoCorto());
+		System.out.println("Formato largo: " + fechaActual.ImprimirfechaFormatoLargo());
+		
 
 		TiempoAnemica hora = new TiempoAnemica();
 

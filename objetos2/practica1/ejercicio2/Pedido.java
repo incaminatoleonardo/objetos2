@@ -1,35 +1,32 @@
 package ejercicio2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pedido {
 
-	// private Alimento alimento;
-	// private int cantidad;
+	private List<CantidadItemMenu> itemMenuBebidas = new ArrayList<>();
+	private List<CantidadItemMenu> itemMenuComidas = new ArrayList<>();
+	//private TarjetaCredito tarjetacredito;
+	//private Propina propina;
 
-	private Bebida bebida;
-	private PlatoPrincipal comida;
+	
+	
+	public void AñadirBebida(CantidadItemMenu comestible) {
 
-	public Pedido(Bebida bebida, PlatoPrincipal comida) {
-		super();
-		this.bebida = bebida;
-		this.comida = comida;
-	}
-
-	public double CalcularPedido() {
-
-		return comida.ObetenerCostoPlato() + bebida.ObetenerCostoBebida();
+		
 
 	}
+	
 
-	public double ObtenerBebida() {
+	/*public static void ConfirmarPedido(TarjetaCredito tarjeta, Propina propina) {
+		double costoTotal = 0;
+		for (CantidadItemMenu pedido : pedidos) {
+			costoTotal = costoTotal + tarjeta.CalcularPrecioTotal(pedido, propina);
 
-		return bebida.ObetenerCostoBebida();
+		}
 
-	}
-
-	public double ObtenerComida() {
-
-		return comida.ObetenerCostoPlato();
-
-	}
+		System.out.println("El costo total del pedido es: " + costoTotal);
+	}*/
 
 }

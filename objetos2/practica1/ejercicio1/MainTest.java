@@ -22,9 +22,9 @@ class MainTest {
 		// Creo el concurso
 		List<Participante> participantes = new ArrayList<>();
 		List<Participante> participantesFueraRango = new ArrayList<>();
-		Concurso concurso = new Concurso(participantes, LocalDate.of(2022, 03, 14), LocalDate.of(2022, 03, 20));
-		Concurso concursoFueraRango = new Concurso(participantesFueraRango, LocalDate.of(2022, 04, 14),
-				LocalDate.of(2022, 04, 20));
+		Concurso concurso = new Concurso(participantes, LocalDate.now(), LocalDate.now().plusDays(7));
+		Concurso concursoFueraRango = new Concurso(participantesFueraRango, LocalDate.now().plusMonths(1),
+				LocalDate.now().plusMonths(2));
 		int cantidadPartipantes = 1;
 		int cantidadPartipantesFueraRango = 0;
 
@@ -38,12 +38,7 @@ class MainTest {
 		assertEquals(LocalDate.now(), concurso.ObtenerFechaInicial());
 		assertEquals(cantidadPartipantesFueraRango, concursoFueraRango.CantidadParticipantes());
 
-		/*
-		 * Los test no funcionan siempre ya que dependen de las fechas de inscripcion
-		 * que tenga el concurso, para que funcionen siempre el concurso tendria que
-		 * tener fechas dinamicas ---- COSULTA: DEBO HACERLO CON FECHAS DINAMICAS: ej
-		 * LocalDate.now() y LocalDate.now()+7dias?
-		 */
+		
 
 		/* Preguntar como ver el porcentaje del codigo abarcado por el test */
 

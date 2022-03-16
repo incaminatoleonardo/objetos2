@@ -14,7 +14,7 @@ public class Main {
 		Participante participante2 = new Participante("Juan", "2", cartera);
 		// Creo el concurso
 		List<Participante> participantes = new ArrayList<>();
-		Concurso concurso = new Concurso(participantes, LocalDate.of(2022, 03, 13), LocalDate.of(2022, 03, 20));
+		Concurso concurso = new Concurso(participantes, LocalDate.now(), LocalDate.now().plusDays(7));
 
 		// Añado el participante
 

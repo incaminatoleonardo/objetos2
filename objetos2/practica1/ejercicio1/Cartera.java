@@ -6,7 +6,7 @@ public class Cartera {
 	private int bonificacion = 10;
 
 	public void Sumarpuntaje() {
-		puntaje = +bonificacion;
+		puntaje = + bonificacion;
 	}
 
 	public String toString() {

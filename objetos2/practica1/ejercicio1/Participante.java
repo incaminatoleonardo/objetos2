@@ -6,8 +6,8 @@ public class Participante {
 	private String dni;
 	private Cartera cartera;
 
-	public Cartera ObtenerCartera() {
-		return cartera;
+	public void SumarPuntaje() {
+		this.cartera.Sumarpuntaje();
 	}
 
 	public Participante(String nombre, String dni, Cartera cartera) {
