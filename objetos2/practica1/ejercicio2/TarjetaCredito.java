@@ -1,10 +1,10 @@
 package ejercicio2;
 
-public abstract class TarjetaCredito {
+public class TarjetaCredito {
 
-	public double CalcularPrecioTotal(CantidadItemMenu pedido, Propina propina) {
+	public double CalcularPrecioTotal(Pedido pedido, Propina propina) {
 
-		return pedido.CalcularPedido() + propina.CalcularPropina(pedido);
+		return pedido.sumarPedidoTotal() + propina.CalcularPropina(pedido);
 
 	}
 

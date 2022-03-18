@@ -2,9 +2,9 @@ package ejercicio2;
 
 public class TCreditoComPlus extends TarjetaCredito {
 
-	public double CalcularPrecioTotal(double costo, Propina propina) {
+	public double CalcularPrecioTotal(Pedido pedido, Propina propina) {
 
-		return costo - (costo * 2 / 100);
+		return super.CalcularPrecioTotal(pedido, propina) - (pedido.sumarPedidoTotal() * 2 / 100);
 
 	}
 }
