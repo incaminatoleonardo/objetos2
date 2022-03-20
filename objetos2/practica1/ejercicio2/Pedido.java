@@ -7,8 +7,6 @@ public class Pedido {
 
 	private List<CantidadItemMenu> itemMenuBebidas = new ArrayList<>();
 	private List<CantidadItemMenu> itemMenuComidas = new ArrayList<>();
-	// private TarjetaCredito tarjetacredito;
-	// private Propina propina;
 
 	public void añadirBebida(CantidadItemMenu comestible) {
 
@@ -56,15 +54,5 @@ public class Pedido {
 		return "Pedido [itemMenuBebidas=" + itemMenuBebidas.toString() + ", itemMenuComidas="
 				+ itemMenuComidas.toString() + "]";
 	}
-
-	/*
-	 * public static void ConfirmarPedido(TarjetaCredito tarjeta, Propina propina) {
-	 * double costoTotal = 0; for (CantidadItemMenu pedido : pedidos) { costoTotal =
-	 * costoTotal + tarjeta.CalcularPrecioTotal(pedido, propina);
-	 * 
-	 * }
-	 * 
-	 * System.out.println("El costo total del pedido es: " + costoTotal); }
-	 */
 
 }

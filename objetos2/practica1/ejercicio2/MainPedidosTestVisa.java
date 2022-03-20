@@ -1,9 +1,15 @@
 package ejercicio2;
 
-public class Main {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	public static void main(String[] args) {
+import org.junit.jupiter.api.Test;
 
+class MainPedidosTestVisa {
+
+	@Test
+	void test() {
+
+		// SET UP
 		// Creacion del pedido
 		itemMenu coca = new itemMenu("coca", 7);
 		CantidadItemMenu tresCocas = new CantidadItemMenu(coca, 3);
@@ -21,18 +27,26 @@ public class Main {
 		pedido.añadirComida(unasPapas);
 		pedido.añadirComida(dosPanchos);
 
-		// System.out.println(pedido.toString());
-
 		// Crear Tarjeta
-		TarjetaCredito tarjeta = new TCreditoMastercard();
+
+		TarjetaCredito tarjetaVisa = new TCreditoVisa();
 
 		// Crear Propina
-		Propina propina = new Propina3porciento();
+		Propina propina3 = new Propina3porciento();
 
-		System.out.println(pedido.sumarPedidoBebida());
-		System.out.println(pedido.sumarPedidoComida());
+		// Creo Resultado esperado
 
-		System.out.println(tarjeta.CalcularPrecioTotal(pedido, propina));
+		double resultadoEsperadoVisa = 66.02;
+
+		// EXERCISE
+
+		// Visa
+		assertEquals(resultadoEsperadoVisa, tarjetaVisa.CalcularPrecioTotal(pedido, propina3));
+
+		assertEquals(resultadoEsperadoVisa, tarjetaVisa.CalcularPrecioTotal(pedido, propina3), 0.01);// aca me toma
+																										// hasta el
+																										// segundo
+																										// digito
 
 	}
 

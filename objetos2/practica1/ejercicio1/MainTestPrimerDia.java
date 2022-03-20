@@ -1,29 +1,37 @@
 package ejercicio1;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+import org.junit.jupiter.api.Test;
 
-	public static void main(String[] args) {
+class MainTestPrimerDia {
 
+	@Test
+	void test() {
+
+		// SET UP
 		// Creo el Participante
 		Cartera cartera = new Cartera();
 		Participante participante1 = new Participante("Jose", "1", cartera);
-		Participante participante2 = new Participante("Juan", "2", cartera);
+
 		// Creo el concurso
 		List<Participante> participantes = new ArrayList<>();
+
 		Concurso concurso = new Concurso(participantes, LocalDate.now(), LocalDate.now().plusDays(7));
 
-		// Añado el participante
+		int cantidadPartipantes = 1;
 
+		// EXERCISE
 		concurso.InscribirParticipante(participante1);
-		concurso.InscribirParticipante(participante2);
 
-		// Imprimo los participantes del concurso
-		System.out.println(concurso.toString());
-		participante1.ImprimirPuntaje();
+		// VERIFY
+
+		assertEquals(cantidadPartipantes, concurso.CantidadParticipantes());
+		assertEquals(LocalDate.now(), concurso.ObtenerFechaInicial());
 
 	}
 

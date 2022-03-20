@@ -23,10 +23,11 @@ public class Concurso {
 			participantes.add(participante);
 			if (this.fechaInicial.isEqual(LocalDate.now())) {
 				participante.SumarPuntaje();
-				System.out.println("El participante: " + participante.toString() + "Sumo 10 puntos");
+
 			}
 		} else {
-			System.out.println("Se encuentra fuera de las fechas de inscripcion");
+			throw new RuntimeException("Se encuentra fuera de las fechas de inscripcion");
+
 		}
 
 	}
